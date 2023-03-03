@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import BtTheme from './components/BtTheme';
+import Clock from './components/Clock';
+import GlobalVar from './context/GlobalVar';
+import Global from './styles';
+import { Theme2, Theme1 } from './styles/theme';
 
-function App() {
+const App = () => {
+  const [change, setChange] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalVar.Provider value={
+      {
+        change,
+        setChange
+      }
+    }>
+      <div className='Header'><BtTheme /></div>
+      <div className='Container'>
+        <Clock />
+      </div>
+      {change ? <Theme1/>:<Theme2/>}
+      <Global />
+    </GlobalVar.Provider >
   );
 }
 

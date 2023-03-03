@@ -1,0 +1,18 @@
+{
+    "ThemeOne": {
+        "body1": "#abcef3f0",
+        "body2": "#a7cff1",
+        "bodyTime": "#b8e9f3bd",
+        "bodyTimeShadow": "#728f9196",
+        "time": "#4783ff",
+        "border": "#ffffff"
+    },
+    "ThemeTwo": {
+        "body1": "#121212",
+        "body2": "#080808",
+        "bodyTime": "#161818",
+        "bodyTimeShadow": "#0c0c0c",
+        "time": "#0c0c0c",
+        "border": "#ffffff"
+    }
+}
